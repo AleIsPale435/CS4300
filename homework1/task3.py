@@ -57,18 +57,28 @@ def sumOfNumbers():
         number += 1
     return total
         
-if __name__ == "__main__":
-    
-    # Asks user to input number to check for positive, negative or zero.
-    number = int(input("Enter a number: "))
-    print("The number is {checkNumber(number)}")
+# Tests the checkNumber function to ensure the positive output works.
+def testNumberPositive():
+    assert checkNumber(6) == "Positive"
 
-    # For loop to print the first 10 numbers.
-    print("First ten prime numbers:")
-    primes = firstTenPrimeNumbers()
-    for prime in primes:
-        print(prime, end=" ")
-    print()
+# Tests the checkNumber function to ensure the negative output works.
+def testNumberNegative():
+    assert checkNumber(-4) == "Negative"
+
+# Tests the checkNumber function to ensure the zero output works.
+def testNumberZero():
+    assert checkNumber(0) == "Zero"
+
+# Tests the firstTenPrimes function to ensure the first ten prime numbers outputted are correct.
+def testFirstTenPrimes():
     
-    # Print the sum of numbers 1-100
-    print("The sum of the numbers 1-100 is: ", sumOfNumbers())
+    firstTenPrimeNums = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+    result = firstTenPrimeNumbers()
+    assert result == firstTenPrimeNums
+
+# Tests the sumOfNumbers function to ensure that the sum of the first 100 numbers is correct.
+def testSum1To100():
+
+    correctSum = 5050
+    result = sumOfNumbers()
+    assert result == correctSum

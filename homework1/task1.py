@@ -2,6 +2,10 @@
 def main():
     print("Hello, World!")
 
-# This ensures that main() is called only when the script is executed directly.
-if __name__ == "__main__":
+
+# This function will test the output of the main function, capture the console output, and see if it matches the hello world output.
+def test_main_output(capsys):
     main()
+    captured = capsys.readouterr()
+    assert captured.out.strip() == "Hello, World!"
+

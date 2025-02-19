@@ -22,11 +22,24 @@ studentDatabase = {
     "Pablo": "35037"
 }
 
-if __name__ == "__main__":
-    print("Top three favorite books: ")
-    for book in getFirstThreeBooks():
-        print(f"{book['Title']} by {book['Author']}")
+# This function will test the getFirstThreeBooks function to ensure that it does printout the correct first three books in the list.
+def testGetFirstThreeBooks():
+    expectedBooks = [
+        {"Title": "Diary of a Wimpy Kid", "Author": "Jeff Kinney"},
+        {"Title": "Big Nate and Friends", "Author": "Lincoln Peirce"},
+        {"Title": "Harry Potter and the Goblet of Fire", "Author": "J.K. Rowling"},
+    ]
 
-    print("Student Database:")
-    for student, studentId in studentDatabase.items():
-        print(f"{student}: {studentId}")
+    assert getFirstThreeBooks() == expectedBooks
+
+# This will check the student database and make sure it has a name and a student ID number.
+def testStudentDatabase():
+
+    correctDatabase = {
+        "Ale": "71020",
+        "Michael": "60921",
+        "Josh": "14221",
+        "Pablo": "35037"
+    }
+
+    assert studentDatabase == correctDatabase

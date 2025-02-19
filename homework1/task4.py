@@ -1,3 +1,5 @@
+import pytest
+
 # This function will take in a price and a discount amount and calculate the discounted price.
 def calculateDiscount(price, discount):
 
@@ -6,10 +8,18 @@ def calculateDiscount(price, discount):
     discountedPrice = price - (price * discount)
     return discountedPrice
 
-if __name__ == "__main__":
+# This function will test the discount function with only integers.
+def testDiscountIntegers():
+    assert calculateDiscount(100, 40) == 60
 
-    # User input for the original price and discount amount.
-    originalPrice = float(input("Enter the price of an item: "))
-    discountAmount = float(input("Enter the discount amount: "))
-    finalPrice = calculateDiscount(originalPrice, discountAmount)
-    print("Price after discount: ", finalPrice)
+# This function will test the discount function with only floats.
+def testDiscountFloats():
+
+    correctAnswer = calculateDiscount(129.99, 65.5)
+    assert calculateDiscount(129.99, 65.5) == pytest.approx(correctAnswer)
+
+# This function will test the discount function with both an integer and a float variable.
+def testDiscountMixed():
+
+    correctAnswer = calculateDiscount(175.10, 70)
+    assert calculateDiscount(175.10, 70) == pytest.approx(correctAnswer)

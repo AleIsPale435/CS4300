@@ -22,10 +22,21 @@ def getBoolean():
     falseFlag = False 
     return trueFlag and not falseFlag
 
-if __name__ == "__main__":
+# Test case for integer function, checks if its an integer and if it is the correct answer.
+def testGetInteger():
+    assert isinstance(getInteger(), int)
+    assert getInteger() == 5
+# Test case for float function, checks if it is a float and if it is the correct answer.
+def testGetFloat():
+    assert isinstance(getFloat(), float)
+    assert getFloat() == 27.2034
 
-    # Calls all of the functions.
-    print(getInteger())
-    print(getFloat())
-    print(getString())
-    print(getBoolean())
+# Test case for string function, checks if it is a string and if the concatenation of strings matches the answer.
+def testGetString():
+    assert isinstance(getString(), str)
+    assert getString() == "Task 2 Status: Complete"
+
+# Test case for boolean function, checks if it is a boolean and if the function returned true.
+def testGetBoolean():
+    assert isinstance(getBoolean(), bool)
+    assert getBoolean() is True
