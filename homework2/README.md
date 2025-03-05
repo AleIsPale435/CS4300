@@ -1,7 +1,7 @@
 For homework 2, I used ChatGPT to help me generate the following:
-- base.html black bars and layout
+- base.html black bars and layout 
     - Lines 6 - 26 OpenAI. (2023). ChatGPT (Mar 14 version). [Online Chat Interface].
-- helped on polishing a view function such as seat_booking_view 
+- helped on polishing a view function such as seat_booking_view (bookings/views.py)
     - Lines 31 - 53 OpenAI. (2023). ChatGPT (Mar 14 version). [Online Chat Interface].
 
 Setup Instructions
