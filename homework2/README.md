@@ -5,44 +5,7 @@ For homework 2, I used ChatGPT to help me generate the following:
     - Lines 31 - 53 OpenAI. (2023). ChatGPT (Mar 14 version). [Online Chat Interface].
 
 Setup Instructions
-Clone the Repository
-
-bash
-Copy
-git clone https://github.com/YourUsername/YourRepoName.git
-cd YourRepoName
-Create and Activate a Virtual Environment
-
-bash
-Copy
-python3 -m venv homework2
-source homework2/bin/activate  
-# or: myenv\Scripts\activate (Windows)
-Install Dependencies
-
-bash
-Copy
-pip install -r requirements.txt
-If you don’t have a requirements.txt, you can install manually:
-
-bash
-Copy
-pip install django djangorestframework
-Set Up Environment Variables (Optional)
-
-Apply Migrations
-
-bash
-Copy
-python manage.py makemigrations
-python manage.py migrate
-
-bash
-Copy
-python manage.py createsuperuser
-Running the Server
-Start the Django development server:
-
-bash
-Copy
-python manage.py runserver 0.0.0.0:3000
+1. cd homework2
+2. source homework2/bin/activate
+3. cd movie_theater_booking
+4. python manage.py runserver 0.0.0.0:3000
